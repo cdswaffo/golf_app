@@ -10,3 +10,6 @@ This app will be mainly deployed to mobile phones.
 
 The app will eventually have special features that will enable the user to email or
 print the data on an easy to read scorecard that has his/her stats displayed.
+
+Notes - This app has most of its data hardcoded but will eventually have an sql/php database
+implemented with javascript or jquery to use with the 'permanent' LocalStorage that html5 now provides help with.
