@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Golf Pro</title>
+        
+        <!-- My stylesheets -->
+        <link rel="stylesheet" type="text/css" href="../stylesheets/maincss.css" />
+        <link rel="stylesheet" type="text/css" href="../stylesheets/jquery.mobile-1.3.2.min.css" />
+        <link rel="stylesheet" type="text/css" href="../stylesheets/jquery.mobile.theme.css" />
+
+        
+        <!-- My javascript -->
+        <script type="text/javascript" src="../javascript/jquery.main.js"></script>
+        <script type="text/javascript" src="../javascript/jquery.mobile-1.3.2.min.js"></script>
+        <script type="text/javascript" src="../javascript/my.javascript.js"></script>
+        <script language="javascript">
+            function getHole() {
+                document.getElementById(holeID).innerHtml = "Hole";   
+            }
+        </script>
+    </head>
+    
+    <body>
+        <div data-role="page" id="page1">
+            <div data-role="header" name="header" id="header" data-theme="c">
+                <a href="index.html" data-role="button" data-theme="a">Home</a>
+                <h1 id="test">Stats</h1>
+                <a href="newround.html" data-role="button" data-theme="a">New</a>
+            </div>
+            <div data-role="content" name="content" id="content">
+                <form name="form">
+                    <fieldset id="field" data-role="controlgroup" data-type="horizontal">
+                        <label for="rbuttons" id="labels">Par is:</label>
+                        <div id="rbuttons">
+                            <input type="radio" name="radio" id="radio-choice-1" data-theme="b" onchange="Hole(this.form)">
+                            <label for="radio-choice-1">3</label>
+                            <input type="radio" name="radio" id="radio-choice-2" data-theme="b" onchange="Hole(this.form)">
+                            <label for="radio-choice-2">4</label>
+                            <input type="radio" name="radio" id="radio-choice-3" data-theme="b" onchange="Hole(this.form)">
+                            <label for="radio-choice-3">5</label>
+                        </div>
+                    </fieldset>
+                    
+                    <fieldset id="field" data-role="controlgroup">
+                        <label for="flip-1" id="labels">Fairway Hit:</label>
+                        <select name="flip-1" id="flip-1" data-theme="b" data-track-theme="c" data-role="slider">
+                            <option value="missed">No</option>
+                            <option value="hit">Yes</option>
+                        </select>
+                        <label for="flip-2" id="labels">GIR:</label>
+                        <select name="flip-2" id="flip-2" data-theme="b" data-track-theme="c"data-role="slider">
+                            <option value="missed">No</option>
+                            <option value="hit">Yes</option>
+                        </select>
+                    </fieldset>
+                    <label for="slider-1" id="labels">Chips:</label>
+                    <input type="range" name="slider-1" id="slider-1" value="0" min="0" max="5"
+                           data-theme="b" data-track-theme="c">
+                    <label for="slider-2" id="labels">Putts:</label>
+                    <input type="range" name="slider-2" id="slider-2" value="0" min="0" max="7"
+                           data-theme="b" data-track-theme="c">
+                    <br />   
+                    <a href="stats.html" data-role="button" data-transition="flip" data-theme="b">Next Hole</a>
+                </form>
+                <a data-role="button" href="finish.html">End Round</a>
+            </div>
+            <div data-role="footer" data-position="fixed" id="footer">
+                
+            </div>
+        </div>
+    </body>
+</html>
